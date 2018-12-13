@@ -1,0 +1,277 @@
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+
+.container {
+ min-height: 100vh;
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 75px;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg")
+      no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  transition: all 5s linear;
+}
+
+.coralBackground {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://i.pinimg.com/originals/30/6f/dd/306fddfb08d26c2962d0965592cc1f26.jpg")
+      no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.headerTop {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  background-color: #0000005c;
+  padding: 5px;
+}
+
+.navList {
+  width: 85%;
+  display: flex;
+}
+
+.navTitle {
+  width: 15%;
+}
+
+.nameBox,
+.nameTagline {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.buttonHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.navButton {
+  border: 1px solid #00000000;
+  background: none;
+  color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 18px;
+}
+
+.navButton:hover,
+.navButton:focus,
+.contact:hover,
+.contact:focus {
+  cursor: pointer;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+
+.footerBottom {
+      position: absolute;
+    bottom: 0;
+    display: flex;
+    background-color: #0000005c;
+    padding: 5px;
+    width: 100%;
+    margin: auto;
+    height: 75px;
+    
+}
+
+.footerBox {
+  position: relative;
+  min-height: 100%;
+}
+
+.contactBox {
+  width: 15%;
+  text-align: center;
+  transition: all 2s;
+}
+
+.glow {
+  color: white;
+  text-shadow: 0 0 5px #c3212100, 0 0 10px #fff, 0 0 20px #35bd7c, 0 0 30px #1fc18d, 0 0 40px #09d4d0, 0 0 55px #1fb4c3, 0 0 75px #128cec;
+}
+
+.contactList {
+  width: 85%;
+  display: flex;
+}
+
+.contactHolder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.contact {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #00000000;
+  padding: 1px 6px;
+  font-size: 18px;
+  transition: text-shadow 2s ease;
+}
+
+.projectBox {
+  display: flex;
+  background-color: #0000005c;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.9);
+  transition: all 3s;
+}
+
+.faded {
+  opacity: 0;
+}
+
+.projectTitle {
+  text-align: center;
+  border-bottom: 1px solid white;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.screenshot {
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+  margin-bottom: 10px;
+}
+
+.linkBox {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.projectLink {
+  margin: 0.5em;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  flex: 1;
+  background: linear-gradient(to right, #00000075 50%, #00000000 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease;
+}
+
+.projectLink:hover,
+.projectLink:focus {
+  background-position: left bottom;
+}
+
+.projectText {
+  padding: 5px;
+  width: 65%;
+  margin: auto;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.techIcons {
+  margin: auto;
+  display: flex;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 80%;
+  flex-wrap: wrap;
+  background-color: #80808057;
+}
+
+.icon {
+  flex: 1;
+  margin: 0.5em;
+}
+
+.infoButton {
+  display: block;
+  width: 30%;
+  height: 30px;
+  margin: auto;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: none;
+  color: white;
+  background: linear-gradient(to right, #00000075 50%, #00000000 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease;
+}
+
+.infoButton:hover,
+.infoButton:focus {
+  background-position: left bottom;
+  cursor: pointer;
+}
+
+.aboutMeHolder {
+  width: 80%;
+  background-color: #0000005c;
+  margin: auto;
+  padding: 10px;
+}
+
+.aboutMeHolder p, li {
+  font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.techContainer {
+  display: flex;
+  width: 100%;
+}
+
+.techHolder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+}
+
+.techList {
+  list-style: none;
+  padding: 0px;
+  text-align: center;
+}
+
+.techTitle {
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  margin-bottom: 0;
+  font-weight: bold;
+}
