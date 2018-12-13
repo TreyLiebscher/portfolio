@@ -88,7 +88,7 @@ If a user wishes, they may set their stories to 'public' status and the story wi
 ];
 
 const aboutMe = `
-      <div class="aboutMeHolder">
+      <div class="aboutMeHolder faded">
         <h2>Hi, I'm Trey!</h2>
         <p>I am a web developer currently based in the Raleigh-Durham area of North Carolina.</p>
         <p>I have many interests, but here are the three big ones:</p>

@@ -58,7 +58,7 @@ function handleProjectsClick(){
     const projectFadeIn = new Promise((res, rej) => {
       setTimeout(() => {
         res($('.projectBox').toggleClass('faded'));
-      }, 250);
+      }, 100);
     });
     
   })
@@ -67,7 +67,13 @@ function handleProjectsClick(){
 function handleAboutClick(){
   $('#aboutButton').on('click', (ev) => {
     ev.preventDefault();
-    $('#main-content').html(aboutMe)
+    $('#main-content').html(aboutMe);
+
+    const aboutFadeIn = new Promise((res, rej) => {
+      setTimeout(() => {
+        res($('.aboutMeHolder').toggleClass('faded'));
+      }, 100);
+    });
   });
 }
 
