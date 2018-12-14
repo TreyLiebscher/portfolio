@@ -25,13 +25,12 @@ const ICONS = {
 </svg>`
 };
 
-const projects = [
-  {
+const projects = [{
     title: "Movie Helix",
+    id: "movieHelix",
     repo: "https://github.com/TreyLiebscher/helix-movies-client",
     demo: "https://boiling-coast-88828.herokuapp.com/",
-    screenshot:
-      "https://camo.githubusercontent.com/b857704ba64dd16aefd26c979c1f19d57400b583/68747470733a2f2f692e696d6775722e636f6d2f615042546643672e706e67",
+    screenshot: "https://camo.githubusercontent.com/b857704ba64dd16aefd26c979c1f19d57400b583/68747470733a2f2f692e696d6775722e636f6d2f615042546643672e706e67",
     icons: [
       ICONS.html,
       ICONS.css,
@@ -49,10 +48,10 @@ A user can save as many movies as they like and then see a top level view of the
 
   {
     title: "StoryBank",
+    id: "storyBank",
     repo: "https://github.com/TreyLiebscher/storyBank",
     demo: "https://aqueous-inlet-15627.herokuapp.com/app/",
-    screenshot:
-      "https://camo.githubusercontent.com/b74f49af8bcccebb59f1e10ec71f81ee743e1bc2/68747470733a2f2f692e696d6775722e636f6d2f305245455637692e706e67",
+    screenshot: "https://camo.githubusercontent.com/b74f49af8bcccebb59f1e10ec71f81ee743e1bc2/68747470733a2f2f692e696d6775722e636f6d2f305245455637692e706e67",
     icons: [
       ICONS.html,
       ICONS.css,
@@ -70,10 +69,10 @@ If a user wishes, they may set their stories to 'public' status and the story wi
 
   {
     title: "Elevation Visualizer",
+    id: "elevationVisualizer",
     repo: "https://github.com/TreyLiebscher/ElevationVisualApp",
     demo: "https://treyliebscher.github.io/ElevationVisualApp/",
-    screenshot:
-      "https://camo.githubusercontent.com/23fd0f585df5a123fbdc3570d36f5e3569929ede/68747470733a2f2f692e696d6775722e636f6d2f72775342725a652e706e67",
+    screenshot: "https://camo.githubusercontent.com/23fd0f585df5a123fbdc3570d36f5e3569929ede/68747470733a2f2f692e696d6775722e636f6d2f72775342725a652e706e67",
     icons: [ICONS.html, ICONS.css, ICONS.jQuery],
     description: `The Elevation Visualizer allows users to enter a starting address and a destination in order to receive visual feedback on the actual elevation that will be encountered while driving along the route. 
         <br>
@@ -137,3 +136,76 @@ const aboutMe = `
       
       </div>`
 
+const elevationVisualizerInfo = `
+<div class="infoContainer faded" id="elevationVisualizer">
+<button id="back" class="backButton">Back</button>
+<h2 class="infoTitle">Elevation Visualizer</h2>
+<h3>The Goal</h3>
+<p>I’ve always had some trouble with visualizing differences in elevation and I was thinking about how cool and helpful it would be if there were some type of tool that could take two addresses and display a graph showing the difference in elevation in a side-profile type view. I wasn’t sure how that would even look until I remembered 1989’s classic NES game, Bandai Golf: Challenge Pebble Beach.</p>
+
+<div class="infoPicContainer">
+  <div class="infoPicHolder">
+    <img class="infoPic" src="http://www.retrogameage.com/wp-content/uploads/2017/08/Bandai_Golf_Gameplay1-1.jpg"/>
+  </div>
+  <p class="infoPicCaption">Notice the way that the terrain of the course is displayed above the top-down view. This was what I wanted.</p>
+</div>
+
+<h3>API</h3>
+<p>After some research, I discovered that Google’s Elevation API would offer me exactly what I needed. After all, here’s an example picture found in the Elevation API documentation:</p>
+<div class="infoPicContainer">
+  <div class="infoPicHolder">
+    <img class="infoPic" src="https://geochalkboard.files.wordpress.com/2010/03/elevationservice2.jpg"/>
+  </div>  
+  <p class="infoPicCaption">Perfect!</p>
+</div>
+<p>But I quickly realized that while this could show me what I wanted (point A elevation vs point B), there was a limitation: the elevation API can only draw a straight line directly from point to point. So, while it was a good tool for seeing the elevation between two points, it wasn’t all that relevant to anyone who wasn’t a bird and could fly over rivers, mountains, etc. 
+
+    Knowing that I wanted this app to follow actual roads for its elevation outputs, I decided to take a look at the Google Maps API…
+</p>
+
+<h3>The Polypoints</h3>
+<p>Google Maps uses large (read: gigantic) numbers of encoded polypoints represent the latitude/longitude of points along a road, like this:</p>
+<br>
+<div class="infoPicContainer">
+  <p>A -> B -> C -> D -> E -> F -> G -> H</p>
+</div>
+<p>In reality, those points are actually quite close together, so I figured that if I did an elevation request from A to B, B to C, then C to D and so on, I could piece them all together and get an accurate representation of the elevation along that road.</p>
+<br>
+<p>This was all fine until I started looking at how many polypoints there can be in a step of a route, such as the number of polypoints for a 30-mile leg of a journey that utilized freeways. There could easily be thousands, if not tens of thousands, of points in situations like these. And, the elevation API had a limit on how many requests could be made at once.</p>
+<br>
+<p>But, knowing that the polypoints were so close together, I figured I could keep some level of accuracy and still get the data I needed by condensing the giant arrays of polypoints by ‘leapfrogging’ over values in between and scaling the size of the ‘leap’ according to the maximum amount I could request from the API:</p>
+<div class="infoPicContainer">
+  <p>Before</p>
+  <p>A -> B -> C -> D -> E -> F -> G -> H</p>
+  <br>
+  <p>After</p>
+  <p>A -> C -> E -> G</p>
+</div>
+<p>While there is some degree of accuracy lost with this approach, it is hardly noticeable, as it still gives a very accurate visual representation of roads, particularly if one is familiar with them and knows what to look for.</p>
+<button id="back" class="backButton">Back</button>
+</div>
+`
+
+function renderProjectBox(pro){
+  return `
+          <div class="projectBox faded" id="project-box">
+            <h2 class="projectTitle">${pro.title}</h2>
+            <div class="linkBox">
+              <a href=${pro.repo} target="blank" class="projectLink">Code</a>
+              <a href="${pro.demo}" target="blank" class="projectLink">Live Demo</a>
+            </div>
+            <img src="${pro.screenshot}" class="screenshot" />
+            <p class="projectText">
+              ${pro.description}
+            </p>
+            <div class="techIcons">
+              ${pro.icons.join("")}
+            </div>
+            <button id="${pro.id}" class="infoButton">MORE INFO</button>
+          </div>
+  `
+}
+
+const renderedProjects = projects.map((project) => {
+  return renderProjectBox(project);
+});

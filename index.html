@@ -14,46 +14,114 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 </head>
 
-<body id="siteBody">
+<body id="siteBody" class="sea">
   <div class="container">
-  <header role="banner" class="headerTop">
-    
-    <div class="navTitle">
-      <h1 class="nameBox">TREY LIEBSCHER</h1>
-      <p class="nameTagline">WEB DEVELOPER</p>
-    </div>
+    <header role="banner" class="headerTop">
 
-    <div class="navList">
-      <div class="buttonHolder"><button class="navButton" id="aboutButton">ABOUT ME</button></div>
-      <div class="buttonHolder"><button class="navButton" id="projectButton">PROJECTS</button></div>
-      <div class="buttonHolder"><button class="navButton" id="contactButton">CONTACT</button></div>
-    </div>
-
-  </header>
-
-  <section role="region" class="mainContent" id="main-content">
-  </section>
-
-  <footer class="footerBottom">
-    <h2 class="contactBox">CONTACT</h2>
-    <div class="contactList">
-      <div class="contactHolder">
-        <a href="https://github.com/TreyLiebscher" target="blank" class="contact">GITHUB</a>
+      <div class="navTitle">
+        <h1 class="nameBox">TREY LIEBSCHER</h1>
+        <p class="nameTagline">WEB DEVELOPER</p>
       </div>
-      <div class="contactHolder">
-        <a href="https://www.linkedin.com/in/trey-liebscher-70a692161" target="blank" class="contact">LINKEDIN</a>
+
+      <div class="navList">
+        <div class="buttonHolder"><button class="navButton" id="aboutButton">ABOUT ME</button></div>
+        <div class="buttonHolder"><button class="navButton" id="projectButton">PROJECTS</button></div>
+        <div class="buttonHolder"><button class="navButton" id="contactButton">CONTACT</button></div>
       </div>
-      <div class="contactHolder">
-        <p class="contact">EMAIL</p>
+
+    </header>
+
+    <!-- main content -->
+
+    <section role="region" class="mainContent" id="main-content">
+      <div class="infoContainer" id="elevationVisualizer">
+        <h2 class="infoTitle">Elevation Visualizer</h2>
+        <h3>The Goal</h3>
+        <p>I’ve always had some trouble with visualizing differences in elevation and I was thinking about how cool and
+          helpful it would be if there were some type of tool that could take two addresses and display a graph showing
+          the difference in elevation in a side-profile type view. I wasn’t sure how that would even look until I
+          remembered 1989’s classic NES game, Bandai Golf: Challenge Pebble Beach.</p>
+
+        <div class="infoPicContainer">
+          <div class="infoPicHolder">
+            <img class="infoPic" src="http://www.retrogameage.com/wp-content/uploads/2017/08/Bandai_Golf_Gameplay1-1.jpg" />
+          </div>
+          <p class="infoPicCaption">Notice the way that the terrain of the course is displayed above the top-down view.
+            This was what I wanted.</p>
+        </div>
+
+        <h3>API</h3>
+        <p>After some research, I discovered that Google’s Elevation API would offer me exactly what I needed. After
+          all, here’s an example picture found in the Elevation API documentation:</p>
+        <div class="infoPicContainer">
+          <div class="infoPicHolder">
+            <img class="infoPic" src="https://geochalkboard.files.wordpress.com/2010/03/elevationservice2.jpg" />
+          </div>
+          <p class="infoPicCaption">Perfect!</p>
+        </div>
+        <p>But I quickly realized that while this could show me what I wanted (point A elevation vs point B), there was
+          a limitation: the elevation API can only draw a straight line directly from point to point. So, while it was
+          a good tool for seeing the elevation between two points, it wasn’t all that relevant to anyone who wasn’t a
+          bird and could fly over rivers, mountains, etc.
+
+          Knowing that I wanted this app to follow actual roads for its elevation outputs, I decided to take a look at
+          the Google Maps API…
+        </p>
+
+        <h3>The Polypoints</h3>
+        <p>Google Maps uses large (read: gigantic) numbers of encoded polypoints represent the latitude/longitude of
+          points along a road, like this:</p>
+        <br>
+        <div class="infoPicContainer">
+          <p>A -> B -> C -> D -> E -> F -> G -> H</p>
+        </div>
+        <p>In reality, those points are actually quite close together, so I figured that if I did an elevation request
+          from A to B, B to C, then C to D and so on, I could piece them all together and get an accurate
+          representation of the elevation along that road.</p>
+        <br>
+        <p>This was all fine until I started looking at how many polypoints there can be in a step of a route, such as
+          the number of polypoints for a 30-mile leg of a journey that utilized freeways. There could easily be
+          thousands, if not tens of thousands, of points in situations like these. And, the elevation API had a limit
+          on how many requests could be made at once.</p>
+        <br>
+        <p>But, knowing that the polypoints were so close together, I figured I could keep some level of accuracy and
+          still get the data I needed by condensing the giant arrays of polypoints by ‘leapfrogging’ over values in
+          between and scaling the size of the ‘leap’ according to the maximum amount I could request from the API:</p>
+        <div class="infoPicContainer">
+          <p>Before</p>
+          <p>A -> B -> C -> D -> E -> F -> G -> H</p>
+          <br>
+          <p>After</p>
+          <p>A -> C -> E -> G</p>
+        </div>
+        <p>While there is some degree of accuracy lost with this approach, it is hardly noticeable, as it still gives a
+          very accurate visual representation of roads, particularly if one is familiar with them and knows what to
+          look for.</p>
       </div>
-    </div>
-  </footer>
+    </section>
+
+    <!-- main content -->
+
+    <footer class="footerBottom">
+      <h2 class="contactBox">CONTACT</h2>
+      <div class="contactList">
+        <div class="contactHolder">
+          <a href="https://github.com/TreyLiebscher" target="blank" class="contact">GITHUB</a>
+        </div>
+        <div class="contactHolder">
+          <a href="https://www.linkedin.com/in/trey-liebscher-70a692161" target="blank" class="contact">LINKEDIN</a>
+        </div>
+        <div class="contactHolder">
+          <p class="contact">EMAIL</p>
+        </div>
+      </div>
+    </footer>
 
   </div>
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-      <script src="scripts/store.js"></script>
+  <script src="scripts/store.js"></script>
   <script src="scripts/index.js"></script>
 
 </body>
