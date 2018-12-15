@@ -129,15 +129,14 @@ transition: all 5s;
 }
 
 .footerBottom {
-      position: absolute;
-    bottom: 0;
-    display: flex;
-    background-color: #0000005c;
-    padding: 5px;
-    width: 100%;
-    margin: auto;
-    height: 75px;
-    
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  background-color: #0000005c;
+  padding: 5px;
+  width: 100%;
+  margin: auto;
+  height: 75px;
 }
 
 .footerBox {
@@ -295,6 +294,7 @@ transition: all 5s;
   margin: auto;
   padding: 10px;
   transition: all 1s ease;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.9);
 }
 
 .aboutMeHolder p, li {
@@ -338,6 +338,7 @@ transition: all 5s;
   padding: 15px;
   font-family: "Open Sans", sans-serif;
   transition: all 3s ease;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.9);
 }
 
 .infoTitle {
@@ -370,4 +371,15 @@ transition: all 5s;
 
 .infoCode {
   text-align: left;
+}
+
+.infoLink {
+  text-decoration: none;
+  color: #03c1ff;
+}
+
+.infoLink:hover,
+.infoLink:focus {
+  filter: brightness(120%);
+  text-decoration: underline; 
 }

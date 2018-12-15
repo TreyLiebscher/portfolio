@@ -76,7 +76,7 @@ function changeBackground(element, state1, state2) {
 }
 
 function fade(element, time) {
-  const fadeIn = new Promise((res, rej) => {
+  new Promise((res, rej) => {
     setTimeout(() => {
       res($(element).toggleClass('faded'));
     }, time);
@@ -84,7 +84,7 @@ function fade(element, time) {
 }
 
 function glow(element, start, end) {
-  const animationGlow = new Promise((res, rej) => {
+  new Promise((res, rej) => {
     setTimeout(() => {
       res($(element).toggleClass('glow'));
     }, start);

@@ -290,7 +290,121 @@ Story {
 </div>
 <button id="back" class="backButton">Back</button>
 </div>
-`
+`;
+
+const movieHelixInfo = `
+<div class="infoContainer faded" id="movieHelix">
+<button id="back" class="backButton">Back</button>
+<h2 class="infoTitle">Movie Helix</h2>
+<h3>The Goal</h3>
+<p>I love movies, particularly action movies, but I’ll watch pretty much anything. Due to my extensive
+  watchlist, I usually will describe movies I have seen to friends like this:</p>
+<br>
+<div class="infoPicContainer">
+  <p>'<i>Atomic Blonde</i>? It’s good! It’s like a mix of <i>Die Hard</i>, <i>Tinker Tailor Soldier Spy</i>,
+    with just a dash of <i>The Departed</i> thrown in for good measure!'</p>
+</div>
+
+<br>
+<p>I then started to think about how cool it would be if I could design an app lets users search for a movie
+  and then see a comparison of that movie with three others that were similar to it, effectively seeing that
+  movie’s ‘DNA’.</p>
+
+<h3>TMDB API</h3>
+<p>I quickly discovered the absolutely wonderful <a class="infoLink" href="https://www.themoviedb.org/?language=en-US"
+    target="blank">TMDB API</a>. And as luck would have it, the API already offered a method to find similar
+  movies if a movie to compare against was given. There were some issues with the responses arriving in
+  different configurations, but that was easily taken care of and the base functionality of the app was in
+  place.
+</p>
+
+<h3>Next Steps</h3>
+<p>While the app was doing what I had intended for it to do, I began thinking of ways I could expand it and
+  make it even more useful for people searching for the next best thing to watch.</p>
+<br>
+<p>So, I decided to add an option for users to ‘save’ movies to their profile in a favorites section. When this
+  occurred, I would make a copy of the movie’s data in my own database with references to the user who saved
+  it. Naturally, I ended up creating a many to many relationship between movies and users, then retrieving that
+  data through use of
+  MongoDB’s populate method so I could get a structure like this:</p>
+<div class="infoPicContainer">
+  <figure>
+    <figcaption>Example</figcaption>
+    <pre class="infoCode">
+        <code>
+UserA {
+movies: 'ActionMovie', 'ComedyMovie'
+}
+
+UserB {
+movies: 'ActionMovie', 'ThrillerMovie'
+}
+
+UserC {
+movies: 'ComedyMovie', 'ThrillerMovie'
+}
+
+ActionMovie: {
+users: UserA, UserB
+}
+
+ComedyMovie: {
+users: UserA, UserC
+}
+
+ThrillerMovie {
+users: UserB, UserC
+}
+        </code>
+      </pre>
+  </figure>
+</div>
+<br>
+<p>As users save more and more movies, I implemented a mongoose method that took into account seven different
+  categories: Genre, decade, budget, revenue, runtime, country, and production company. I would then retrieve
+  the averages for the numerical figures (budget, revenue, runtime) and the most common for the strings
+  (countries, companies, decade, genre) through this method. These averages were then displayed prominently at
+  the top of a user’s profile to give the user an idea of the type of movie they enjoy.</p>
+<br>
+<p>Now that these general preferences could be obtained, I made use of TMDB’s Discover endpoint in order to
+  allow users to search for movies based off of their preferences. I decided to only use decade and production
+  company as parameters for this search because I didn’t want to run the risk of users possibly missing a great
+  movie just because it ran for 10 minutes longer than their preferred run time or cost a few thousand more to
+  make than their preferred budget.</p>
+<br>
+<p>After I setup my own profile and saved around 60 movies, I tested the one click search and was surprised at
+  how well the results turned out for me personally. Many of the movies that were returned in the search were
+  movies that I had seen (and liked!) or movies that looked like I would enjoy them.</p>
+<div class="techContainer">
+  <div class="techHolder">
+    <p class="techTitle">Front-End</p>
+    <ul class="techList">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>React/Redux</li>
+    </ul>
+  </div>
+  <div class="techHolder">
+    <p class="techTitle">Back-End</p>
+    <ul class="techList">
+      <li>nodeJS</li>
+      <li>Express</li>
+      <li>MongoDB/Mongoose</li>
+      <li>Mocha/Chai (testing)</li>
+      <li>Istanbul (test coverage)</li>
+    </ul>
+  </div>
+  <div class="techHolder">
+    <p class="techTitle">CI/Deployment</p>
+    <ul class="techList">
+      <li>Travis CI</li>
+      <li>Heroku</li>
+    </ul>
+  </div>
+</div>
+<button id="back" class="backButton">Back</button>
+</div>
+`;
 
 function renderProjectBox(pro){
   return `
