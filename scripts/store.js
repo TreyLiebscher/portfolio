@@ -27,7 +27,7 @@ const ICONS = {
 
 const projects = [{
     title: "Movie Helix",
-    id: "movieHelix",
+    info: "movieHelix",
     repo: "https://github.com/TreyLiebscher/helix-movies-client",
     demo: "https://boiling-coast-88828.herokuapp.com/",
     screenshot: "https://camo.githubusercontent.com/b857704ba64dd16aefd26c979c1f19d57400b583/68747470733a2f2f692e696d6775722e636f6d2f615042546643672e706e67",
@@ -48,7 +48,7 @@ A user can save as many movies as they like and then see a top level view of the
 
   {
     title: "StoryBank",
-    id: "storyBank",
+    info: "storyBank",
     repo: "https://github.com/TreyLiebscher/storyBank",
     demo: "https://aqueous-inlet-15627.herokuapp.com/app/",
     screenshot: "https://camo.githubusercontent.com/b74f49af8bcccebb59f1e10ec71f81ee743e1bc2/68747470733a2f2f692e696d6775722e636f6d2f305245455637692e706e67",
@@ -69,7 +69,7 @@ If a user wishes, they may set their stories to 'public' status and the story wi
 
   {
     title: "Elevation Visualizer",
-    id: "elevationVisualizer",
+    info: "elevationVisualizer",
     repo: "https://github.com/TreyLiebscher/ElevationVisualApp",
     demo: "https://treyliebscher.github.io/ElevationVisualApp/",
     screenshot: "https://camo.githubusercontent.com/23fd0f585df5a123fbdc3570d36f5e3569929ede/68747470733a2f2f692e696d6775722e636f6d2f72775342725a652e706e67",
@@ -307,7 +307,7 @@ function renderProjectBox(pro){
             <div class="techIcons">
               ${pro.icons.join("")}
             </div>
-            <button id="${pro.id}" class="infoButton">MORE INFO</button>
+            <button id="${pro.info}" class="infoButton">MORE INFO</button>
           </div>
   `
 }

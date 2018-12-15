@@ -29,7 +29,20 @@ body {
   transition: all 5s linear; */
 
 
-.sea {
+/* .sea {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg")
+    no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+color: white;
+font-family: "Open Sans Condensed", sans-serif;
+transition: all 5s;
+} */
+
+.site-body[background-state=sea] {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
   url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg")
     no-repeat center center fixed;
@@ -42,7 +55,20 @@ font-family: "Open Sans Condensed", sans-serif;
 transition: all 5s;
 }
 
-.coral {
+.site-body[background-state=coral] {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("https://i.pinimg.com/originals/30/6f/dd/306fddfb08d26c2962d0965592cc1f26.jpg")
+      no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  transition: all 5s;  
+}
+
+/* .coral {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url("https://i.pinimg.com/originals/30/6f/dd/306fddfb08d26c2962d0965592cc1f26.jpg")
       no-repeat center center fixed;
@@ -53,7 +79,7 @@ transition: all 5s;
   color: white;
   font-family: "Open Sans Condensed", sans-serif;
   transition: all 5s;
-}
+} */
 
 .headerTop {
   display: flex;
