@@ -383,3 +383,42 @@ transition: all 5s;
   filter: brightness(120%);
   text-decoration: underline; 
 }
+
+@media only screen and (max-width: 650px){
+  .headerTop {
+    flex-direction: column;
+    padding: 0px;
+  }
+  
+  .navButton {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .navTitle {
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+  
+  .navList {
+    width: 100%;
+  }
+  
+  .nameBox,
+  .nameTagline {
+    text-align: center;
+  }
+  
+  .nameBox {
+    font-size: 60px;
+  }
+  
+  .nameTagline {
+    font-size: 40px;
+  }
+  
+  #projectButton {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+}
