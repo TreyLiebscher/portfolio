@@ -1,20 +1,22 @@
 'use strict';
 
-function handleContactClick(){
+function handleContactClick() {
   $('#contactButton').on('click', (ev) => {
     ev.preventDefault();
-    
-    $('html, body').animate({scrollTop:$(document).height()}, 'slow');
-    
+
+    $('html, body').animate({
+      scrollTop: $(document).height()
+    }, 'slow');
+
     const glowAnimation = new Promise((res, rej) => {
       setTimeout(() => {
-      res($('.contactBox').toggleClass('glow'));
+        res($('.contactBox').toggleClass('glow'));
       }, 200);
       setTimeout(() => {
         res($('.contactBox').toggleClass('glow'));
       }, 1000);
     });
-    
+
     const contactGlow = new Promise((res, rej) => {
       setTimeout(() => {
         res($('.contact').toggleClass('glow'));
@@ -23,34 +25,37 @@ function handleContactClick(){
         res($('.contact').toggleClass('glow'));
       }, 1600);
     });
-    
+
   });
 }
 
 
 
-function handleProjectsClick(){
+function handleProjectsClick() {
   $('#projectButton').on('click', (ev) => {
     ev.preventDefault();
 
     $('#main-content').html(renderedProjects);
-    if($('#siteBody').hasClass('coral')){
-      backgroundSwap();  
+    if ($('#siteBody').hasClass('coral')) {
+      backgroundSwap();
     }
-    
+
     const projectFadeIn = new Promise((res, rej) => {
       setTimeout(() => {
         res($('.projectBox').toggleClass('faded'));
       }, 100);
     });
-    
+
   })
 }
 
-function handleAboutClick(){
+function handleAboutClick() {
   $('#aboutButton').on('click', (ev) => {
     ev.preventDefault();
     $('#main-content').html(aboutMe);
+    if ($('#siteBody').hasClass('coral')) {
+      backgroundSwap();
+    }
 
     const aboutFadeIn = new Promise((res, rej) => {
       setTimeout(() => {
@@ -60,13 +65,15 @@ function handleAboutClick(){
   });
 }
 
-function backgroundSwap(){
-  $("html, body").animate({ scrollTop: 0 }, "fast");
+function backgroundSwap() {
+  $("html, body").animate({
+    scrollTop: 0
+  }, "fast");
   $('#siteBody').toggleClass('sea');
-  $('#siteBody').toggleClass('coral');  
+  $('#siteBody').toggleClass('coral');
 }
 
-function infoFade(){
+function infoFade() {
   const projectFadeIn = new Promise((res, rej) => {
     setTimeout(() => {
       res($('.infoContainer').toggleClass('faded'));
@@ -74,10 +81,10 @@ function infoFade(){
   });
 }
 
-function infoGlow(){
+function infoGlow() {
   const glowAnimation = new Promise((res, rej) => {
     setTimeout(() => {
-    res($('.infoTitle').toggleClass('glow'));
+      res($('.infoTitle').toggleClass('glow'));
     }, 400);
     setTimeout(() => {
       res($('.infoTitle').toggleClass('glow'));
@@ -86,7 +93,7 @@ function infoGlow(){
 }
 
 
-function handleFirstProject(){
+function handleFirstProject() {
   $('#main-content').on('click', 'button#elevationVisualizer', (ev) => {
     backgroundSwap();
     infoFade();
@@ -95,27 +102,29 @@ function handleFirstProject(){
   });
 }
 
-function handleSecondProject(){
+function handleSecondProject() {
   $('#main-content').on('click', 'button#storyBank', (ev) => {
+    infoFade();
+    infoGlow();
     backgroundSwap();
-    $('#main-content').html(elevationVisualizerInfo)
+    $('#main-content').html(storyBankInfo)
   });
 }
 
-function handleThirdProject(){
+function handleThirdProject() {
   $('#main-content').on('click', 'button#movieHelix', (ev) => {
     backgroundSwap();
     $('#main-content').html(elevationVisualizerInfo)
   });
 }
 
-function handleBackClick(){
+function handleBackClick() {
   $('#main-content').on('click', 'button#back', (ev) => {
     ev.preventDefault();
     $('#siteBody').toggleClass('sea');
     $('#siteBody').toggleClass('coral');
     $('#main-content').html(renderedProjects);
-    
+
     const projectFadeIn = new Promise((res, rej) => {
       setTimeout(() => {
         res($('.projectBox').toggleClass('faded'));
@@ -125,12 +134,13 @@ function handleBackClick(){
   });
 }
 
-function portfolio(){
+function portfolio() {
   $(handleContactClick);
   $(handleAboutClick);
   $(handleProjectsClick);
   $(handleFirstProject);
-  $(handleBackClick);  
+  $(handleSecondProject);
+  $(handleBackClick);
 }
 
 $(portfolio);

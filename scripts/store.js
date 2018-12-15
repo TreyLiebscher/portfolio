@@ -97,7 +97,7 @@ const aboutMe = `
           <li>Learning new stuff</li>
         </ul>
         <p>My passion for web development stems from that third item on the list: <b>learning new stuff</b>. I love that there will always be <i>something</i> new/different that will come up in the world of web development. I like to describe it as an ocean of information/ideas that continues to deepen with every passing second. I like how what may be the best way to do something today could be rendered obsolete tomorrow. The constant strive for <b>better</b> is a constant drive to <b>learn</b>. I cannot think of a place where I would be happier than somewhere where I had to grow in order to be successful.</p>
-        <p>Here are the languages/frameworks/libraries I am versed in:</p>
+        <p>Here are the languages and tools I am versed in:</p>
       
         <div class="techContainer">
           <div class="techHolder">
@@ -182,6 +182,112 @@ const elevationVisualizerInfo = `
   <p>A -> C -> E -> G</p>
 </div>
 <p>While there is some degree of accuracy lost with this approach, it is hardly noticeable, as it still gives a very accurate visual representation of roads, particularly if one is familiar with them and knows what to look for.</p>
+<button id="back" class="backButton">Back</button>
+</div>
+`;
+
+const storyBankInfo = `
+<div class="infoContainer faded" id="storyBank">
+<button id="back" class="backButton">Back</button>
+<h2 class="infoTitle">StoryBank</h2>
+<h3>The Goal</h3>
+<p>My brother and I were talking one day when we both happened to remember a particularly hilarious story that
+  had happened a while back. I remember thinking ‘Wow, if we hadn’t remembered that story at that moment, would
+  we ever have?’ I then decided to build a straight-forward app that would serve as an easy and efficient way
+  to save and organize stories with some very light social media elements in the event that someone wanted to
+  share a story with others.</p>
+
+
+
+<h3>API</h3>
+<p>I built the API for StoryBank using MongoDB and node.JS. I implemented a one-to-many relationship for users
+  to their story folders and a one-to-many relationship for folders to their respective stories. I did this
+  because I wanted to have the option to allow users to make a GET request to view all stories that were
+  designated as ‘public’ by their authors. This way, I didn’t have to even worry about the folders these
+  stories belonged to. Instead, I could just access all of the stories directly without having to access them
+  through folders.</p>
+<div class="infoPicContainer">
+  <figure>
+    <figcaption>Example</figcaption>
+    <pre class="infoCode">
+      <code>
+User: {
+  folder: {
+    ref: User,
+    name: 'Scary Stories'
+  },
+  folder: {
+    ref: User,
+    name: 'Funny Stories'
+  }
+}
+
+Story: {
+  title: 'Scary',
+  folder: 'Scary Stories'
+}
+
+Story {
+  title: 'Funny',
+  folder: 'Funny Stories'
+}
+      </code>
+    </pre>
+  </figure>
+</div>
+
+<h3>Images</h3>
+<p>Perhaps the most difficult aspect of implementing image uploading to the app was the option for users to be
+  able to rotate their images prior to upload. When I was testing the app on mobile, I realized that some
+  phones would inexplicably rotate the images on their side when they were uploaded, resulting in a lot of
+  sideways pictures.</p>
+
+<div class="infoPicContainer">
+  <div class="infoPicHolder">
+    <img src="https://i.imgur.com/V5RZcdt.png" />
+  </div>
+</div>
+
+<p>It wasn’t easy, but after much research and trial/error, I was able to get image rotation implemented. It
+  was a great experience because I was exposed to using a canvas with javascript which was an area that I didn't
+  have much experience.
+</p>
+
+<h3>Discover Section</h3>
+<p>The light social media element I referenced earlier manifests itself in the app as the ‘Discover’ section. I
+  love the idea of sharing amongst users of any app, but for this one, I wanted to remove some aspects that I
+  didn’t feel were necessary in order for one to appreciate a story that they were reading, so no public stories
+  contain any visible info about who wrote it. I had considered implementing a ‘like’ or ‘upvote’ system so
+  that the best rated stories made it to the top, but that also took away from my goal as far as the social
+  aspect was concerned: random stories from random strangers, no muss, no fuss!
+</p>
+<div class="techContainer">
+  <div class="techHolder">
+    <p class="techTitle">Front-End</p>
+    <ul class="techList">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>jQuery</li>
+    </ul>
+  </div>
+  <div class="techHolder">
+    <p class="techTitle">Back-End</p>
+    <ul class="techList">
+      <li>nodeJS</li>
+      <li>Express</li>
+      <li>MongoDB/Mongoose</li>
+      <li>Mocha/Chai (testing)</li>
+      <li>Istanbul (test coverage)</li>
+    </ul>
+  </div>
+  <div class="techHolder">
+    <p class="techTitle">CI/Deployment</p>
+    <ul class="techList">
+      <li>Travis CI</li>
+      <li>Heroku</li>
+    </ul>
+  </div>
+</div>
 <button id="back" class="backButton">Back</button>
 </div>
 `
