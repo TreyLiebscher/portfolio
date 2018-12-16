@@ -1,15 +1,19 @@
 html,
 body {
- height: 100%;
- position: relative;
+  height: 100%;
+  position: relative;
+}
+
+.site-body {
+  margin: 0px;
 }
 
 .container {
- min-height: 100vh;
- overflow: hidden;
- display: block;
- position: relative;
- padding-bottom: 75px;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 75px;
 }
 
 .mainContent {
@@ -17,61 +21,11 @@ body {
 }
 
 
-  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg")
-      no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: white;
-  font-family: "Open Sans Condensed", sans-serif;
-  transition: all 5s linear; */
 
-
-/* .sea {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg")
-    no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-color: white;
-font-family: "Open Sans Condensed", sans-serif;
-transition: all 5s;
-} */
 
 .site-body[background-state=sea] {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg")
-    no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-color: white;
-font-family: "Open Sans Condensed", sans-serif;
-transition: all 5s;
-}
-
-.site-body[background-state=coral] {
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("https://i.pinimg.com/originals/30/6f/dd/306fddfb08d26c2962d0965592cc1f26.jpg")
-      no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: white;
-  font-family: "Open Sans Condensed", sans-serif;
-  transition: all 5s;  
-}
-
-/* .coral {
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("https://i.pinimg.com/originals/30/6f/dd/306fddfb08d26c2962d0965592cc1f26.jpg")
-      no-repeat center center fixed;
+    url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -79,29 +33,56 @@ transition: all 5s;
   color: white;
   font-family: "Open Sans Condensed", sans-serif;
   transition: all 5s;
-} */
+}
+
+.site-body[background-state=coral] {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("https://i.pinimg.com/originals/30/6f/dd/306fddfb08d26c2962d0965592cc1f26.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  transition: all 5s;
+}
 
 .headerTop {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 10px;
   background-color: #0000005c;
-  padding: 5px;
+  flex-direction: column;
+  padding: 0px;
+  margin-bottom: 15px;
 }
 
 .navList {
-  width: 85%;
+  width: 100%;
   display: flex;
+  height: 70px;
+  border-bottom: 1px solid white;
 }
 
+
+
+
 .navTitle {
-  width: 15%;
+  width: 100%;
+  border-bottom: 1px solid white;
 }
 
 .nameBox,
 .nameTagline {
   margin-top: 5px;
   margin-bottom: 5px;
+  text-align: center;
+}
+
+.nameBox {
+  font-size: 40px;
+}
+
+.nameTagline {
+  font-size: 20px;
 }
 
 .buttonHolder {
@@ -117,6 +98,8 @@ transition: all 5s;
   color: white;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 18px;
+  height: 100%;
+  width: 100%;
 }
 
 .navButton:hover,
@@ -124,8 +107,13 @@ transition: all 5s;
 .contact:hover,
 .contact:focus {
   cursor: pointer;
-  border-right: 1px solid white;
+}
+
+
+
+#projectButton {
   border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .footerBottom {
@@ -137,6 +125,7 @@ transition: all 5s;
   width: 100%;
   margin: auto;
   height: 75px;
+  border-top: 1px solid white;
 }
 
 .footerBox {
@@ -181,9 +170,10 @@ transition: all 5s;
   display: flex;
   background-color: #0000005c;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-bottom: 20px;
+  padding: 10px;
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.9);
   transition: all 1s ease;
 }
@@ -237,7 +227,7 @@ transition: all 5s;
 
 .projectText {
   padding: 5px;
-  width: 65%;
+  width: 90%;
   margin: auto;
   margin-bottom: 10px;
   font-family: "Open Sans", sans-serif;
@@ -289,7 +279,7 @@ transition: all 5s;
 }
 
 .aboutMeHolder {
-  width: 80%;
+  width: 90%;
   background-color: #0000005c;
   margin: auto;
   padding: 10px;
@@ -297,15 +287,16 @@ transition: all 5s;
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.9);
 }
 
-.aboutMeHolder p, li {
+.aboutMeHolder p,
+li {
   font-size: 16px;
-    font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .techContainer {
   display: flex;
   width: 100%;
-  background-color: #0000008f;
+  flex-direction: column;
 }
 
 .techHolder {
@@ -313,6 +304,7 @@ transition: all 5s;
   display: flex;
   flex-direction: column;
   margin: 0.5em;
+  background-color: #0000008f;
 }
 
 .techList {
@@ -325,9 +317,13 @@ transition: all 5s;
   text-align: center;
   font-size: 20px;
   border-bottom: 1px solid white;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 10px;
   font-weight: bold;
+  /* margin-top: 5px; */
 }
+
+
 
 .infoContainer {
   display: flex;
@@ -381,44 +377,95 @@ transition: all 5s;
 .infoLink:hover,
 .infoLink:focus {
   filter: brightness(120%);
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (min-width: 650px) {
+  /* TODO currently these are all the mobile defaults, move mobile defs to std are and std down here */
+
+
+
   .headerTop {
-    flex-direction: column;
-    padding: 0px;
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 5px;
   }
-  
+
   .navButton {
-    height: 100%;
-    width: 100%;
+    height: initial;
+    width: initial;
   }
-  
-  .navTitle {
-    width: 100%;
-    border-bottom: 1px solid white;
-  }
-  
-  .navList {
-    width: 100%;
-  }
-  
-  .nameBox,
-  .nameTagline {
-    text-align: center;
-  }
-  
-  .nameBox {
-    font-size: 60px;
-  }
-  
-  .nameTagline {
-    font-size: 40px;
-  }
-  
-  #projectButton {
-    border-left: 1px solid white;
+
+  .navButton:hover,
+  .navButton:focus,
+  .contact:hover,
+  .contact:focus {
+    cursor: pointer;
     border-right: 1px solid white;
+    border-left: 1px solid white;
   }
+
+  #projectButton {
+    border: 1px solid #00000000;
+  }
+
+  #projectButton:hover,
+  #projectButton:focus {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+  }
+
+  .navTitle {
+    width: 15%;
+    border-bottom: none;
+  }
+
+  .navList {
+    width: 85%;
+    height: initial;
+    border-bottom: none;
+  }
+
+  .nameBox {
+    font-size: 25px;
+  }
+
+  .nameTagline {
+    font-size: 15px;
+  }
+
+  .footerBottom {
+    border: none;
+  }
+
+  /* about */
+  .aboutMeHolder {
+    width: 80%;
+  }
+
+  .techContainer {
+    flex-direction: row;
+  }
+
+  .projectBox {
+    width: 80%;
+  }
+
+  .projectText {
+    width: 65%;
+  }
+
+  /*
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+ */
 }
