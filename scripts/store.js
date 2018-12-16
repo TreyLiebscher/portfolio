@@ -298,7 +298,7 @@ const movieHelixInfo = `
 <h2 class="infoTitle">Movie Helix</h2>
 <h3>The Goal</h3>
 <p>I love movies, particularly action movies, but I’ll watch pretty much anything. Due to my extensive
-  watchlist, I usually will describe movies I have seen to friends like this:</p>
+  watchlist, I will usually describe movies I've seen to friends like this:</p>
 <br>
 <div class="infoPicContainer">
   <p>'<i>Atomic Blonde</i>? It’s good! It’s like a mix of <i>Die Hard</i>, <i>Tinker Tailor Soldier Spy</i>,
