@@ -11,7 +11,7 @@ body {
 
 .container {
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: block;
   position: relative;
   padding-bottom: 75px;
