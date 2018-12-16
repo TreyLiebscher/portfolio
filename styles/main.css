@@ -343,7 +343,7 @@ li {
 }
 
 .infoPicContainer {
-  width: 90%;
+  /* width: 90%; */
   margin: auto;
   background-color: #00000061;
   padding: 10px;

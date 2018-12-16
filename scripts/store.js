@@ -87,54 +87,62 @@ If a user wishes, they may set their stories to 'public' status and the story wi
 ];
 
 const aboutMe = `
-      <div class="aboutMeHolder faded">
-        <h2>Hi, I'm Trey!</h2>
-        <p>I am a web developer currently based in the Raleigh-Durham area of North Carolina.</p>
-        <p>I have many interests, but here are the three big ones:</p>
-        <ul>
-          <li>Action Movies (all time periods, foreign and domestic, I seriously think I’ve seen them all)</li>
-          <li>The outdoors (oceans first, mountains second, tundra third)</li>
-          <li>Learning new stuff</li>
-        </ul>
-        <p>My passion for web development stems from that third item on the list: <b>learning new stuff</b>. I love that there will always be <i>something</i> new/different that will come up in the world of web development. I like to describe it as an ocean of information/ideas that continues to deepen with every passing second. I like how what may be the best way to do something today could be rendered obsolete tomorrow. The constant strive for <b>better</b> is a constant drive to <b>learn</b>. I cannot think of a place where I would be happier than somewhere where I had to grow in order to be successful.</p>
-        <p>Here are the languages and tools I am versed in:</p>
-      
-        <div class="techContainer">
-          <div class="techHolder">
-            <p class="techTitle">Front-End</p>
-            <ul class="techList">
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-              <li>jQuery</li>
-              <li>React</li>
-            </ul>
-          </div>
+<div class="aboutMeHolder faded">
+<h2>Hi, I'm Trey!</h2>
+<p>I'm a web developer currently based in the Raleigh-Durham area of North Carolina.</p>
+<p>I have many interests, but here are the three big ones:</p>
+<ul>
+  <li>Action Movies (all time periods, foreign and domestic, I seriously think I’ve seen them all)</li>
+  <li>The outdoors (oceans first, mountains second, tundra third)</li>
+  <li>Learning new stuff</li>
+</ul>
+<p>My passion for web development stems from that third item on the list: <b>learning new stuff</b>. I love
+  that there will always be <i>something</i> new/different that will come up in the world of web development.</p>
+<p> I
+  like to describe it as an ocean of information/ideas that continues to deepen with every passing second. I
+  like how what may be the best way to do something today could be rendered obsolete tomorrow. The constant
+  strive for <b>better</b> is a constant drive to <b>learn</b>.</p>
+<p>I
+  cannot think of a place where I would be
+  happier than somewhere where I had to grow in order to be successful.</p>
+<p>Here are the languages and tools I am versed in:</p>
 
-          <div class="techHolder">
-            <p class="techTitle">Back-End</p>
-            <ul class="techList">
-              <li>nodeJS</li>
-              <li>Express</li>
-              <li>MongoDB/Mongoose</li>
-              <li>Mocha/Chai</li>
-            </ul>
-          </div>
+<div class="techContainer">
+  <div class="techHolder">
+    <p class="techTitle">Front-End</p>
+    <ul class="techList">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>jQuery</li>
+      <li>React</li>
+    </ul>
+  </div>
 
-          <div class="techHolder">
-            <p class="techTitle">Misc</p>
-            <ul class="techList">
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>Heroku</li>
-              <li>Travis CI</li>
-            </ul>
-          </div>
-        </div>
+  <div class="techHolder">
+    <p class="techTitle">Back-End</p>
+    <ul class="techList">
+      <li>nodeJS</li>
+      <li>Express</li>
+      <li>MongoDB/Mongoose</li>
+      <li>Mocha/Chai</li>
+    </ul>
+  </div>
 
-        <p>Currently I am looking for work. Please get in touch with me using the links at the bottom of this page.</p>
-      
-      </div>`
+  <div class="techHolder">
+    <p class="techTitle">Misc</p>
+    <ul class="techList">
+      <li>Git</li>
+      <li>GitHub</li>
+      <li>Heroku</li>
+      <li>Travis CI</li>
+    </ul>
+  </div>
+</div>
+
+<p>Currently I am looking for work. Please get in touch with me using the links at the bottom of this page.</p>
+
+</div>`
 
 const elevationVisualizerInfo = `
 <div class="infoContainer faded" id="elevationVisualizer">
@@ -306,9 +314,8 @@ const movieHelixInfo = `
 </div>
 
 <br>
-<p>I then started to think about how cool it would be if I could design an app lets users search for a movie
-  and then see a comparison of that movie with three others that were similar to it, effectively seeing that
-  movie’s ‘DNA’.</p>
+<p>I then started to think about how cool it would be if I could design an app that lets users search for a movie
+  and then see a comparison of that movie with three others that were similar to it, almost like a DNA comparison.</p>
 
 <h3>TMDB API</h3>
 <p>I quickly discovered the absolutely wonderful <a class="infoLink" href="https://www.themoviedb.org/?language=en-US"
@@ -333,27 +340,27 @@ const movieHelixInfo = `
     <pre class="infoCode">
         <code>
 UserA {
-movies: 'ActionMovie', 'ComedyMovie'
+  movies: 'ActionMovie', 'ComedyMovie'
 }
 
 UserB {
-movies: 'ActionMovie', 'ThrillerMovie'
+  movies: 'ActionMovie', 'ThrillerMovie'
 }
 
 UserC {
-movies: 'ComedyMovie', 'ThrillerMovie'
+  movies: 'ComedyMovie', 'ThrillerMovie'
 }
 
 ActionMovie: {
-users: UserA, UserB
+  users: UserA, UserB
 }
 
 ComedyMovie: {
-users: UserA, UserC
+  users: UserA, UserC
 }
 
 ThrillerMovie {
-users: UserB, UserC
+  users: UserB, UserC
 }
         </code>
       </pre>
@@ -406,7 +413,7 @@ users: UserB, UserC
 </div>
 `;
 
-function renderProjectBox(pro){
+function renderProjectBox(pro) {
   return `
           <div class="projectBox faded" id="project-box">
             <h2 class="projectTitle">${pro.title}</h2>
