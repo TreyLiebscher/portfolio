@@ -33,14 +33,11 @@ body {
   color: white;
   font-family: "Open Sans Condensed", sans-serif;
   transition: all 5s;
-  -webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
 }
 
 .site-body[background-state=coral] {
@@ -53,6 +50,7 @@ body {
   color: white;
   font-family: "Open Sans Condensed", sans-serif;
   transition: all 5s;
+  min-height: 100%;
 }
 
 .headerTop {
