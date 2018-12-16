@@ -2,6 +2,7 @@ html,
 body {
   height: 100%;
   position: relative;
+  min-height: 100%;
 }
 
 .site-body {
@@ -37,7 +38,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 100%;
 }
 
 .site-body[background-state=coral] {
@@ -457,9 +457,7 @@ li {
     width: 80%;
   }
 
-  .projectText {
-    width: 65%;
-  }
+  
 
   /*
   
