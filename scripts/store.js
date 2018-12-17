@@ -421,8 +421,8 @@ function renderProjectBox(pro) {
           <div class="projectBox faded">
             <h2 class="projectTitle">${pro.title}</h2>
             <div class="linkBox">
-              <a href="${pro.repo}#${pro.info}repo" target="blank" name="${pro.info}repo"class="projectLink">Code</a>
-              <a href="${pro.demo}#${pro.info}" target="blank" name="${pro.info}" class="projectLink">Live Demo</a>
+              <a href="${pro.repo}#${pro.info}repo" target="_blank" name="${pro.info}repo"class="projectLink">Code</a>
+              <a href="${pro.demo}#${pro.info}" target="_blank" name="${pro.info}" class="projectLink">Live Demo</a>
             </div>
             <img src="${pro.screenshot}" class="screenshot" />
             <p class="projectText">
