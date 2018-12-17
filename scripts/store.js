@@ -72,7 +72,7 @@ If a user wishes, they may set their stories to 'public' status and the story wi
     info: "elevationVisualizer",
     repo: "https://github.com/TreyLiebscher/ElevationVisualApp",
     demo: "https://treyliebscher.github.io/ElevationVisualApp/",
-    screenshot: "https://camo.githubusercontent.com/23fd0f585df5a123fbdc3570d36f5e3569929ede/68747470733a2f2f692e696d6775722e636f6d2f72775342725a652e706e67",
+    screenshot: "https://i.imgur.com/EI6zkPw.png",
     icons: [ICONS.html, ICONS.css, ICONS.jQuery],
     description: `The Elevation Visualizer allows users to enter a starting address and a destination in order to receive visual feedback on the actual elevation that will be encountered while driving along the route. 
         <br>
