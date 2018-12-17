@@ -340,15 +340,18 @@ const movieHelixInfo = `
     <pre class="infoCode">
         <code>
 UserA {
-  movies: 'ActionMovie', 'ComedyMovie'
+  movies: 'ActionMovie', 
+          'ComedyMovie'
 }
 
 UserB {
-  movies: 'ActionMovie', 'ThrillerMovie'
+  movies: 'ActionMovie',
+          'ThrillerMovie'
 }
 
 UserC {
-  movies: 'ComedyMovie', 'ThrillerMovie'
+  movies: 'ComedyMovie',
+          'ThrillerMovie'
 }
 
 ActionMovie: {
