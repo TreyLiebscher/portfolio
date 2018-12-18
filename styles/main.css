@@ -138,7 +138,7 @@ body {
 }
 
 .contactBox {
-  width: 15%;
+  width: 25%;
   text-align: center;
   transition: all 2s;
 }
@@ -149,7 +149,7 @@ body {
 }
 
 .contactList {
-  width: 85%;
+  width: 75%;
   display: flex;
 }
 
@@ -195,9 +195,9 @@ body {
 }
 
 .screenshot {
-  width: 50%;
+  width: 80%;
   height: 50%;
-  margin-left: 25%;
+  margin: auto;
   margin-bottom: 10px;
 }
 
@@ -384,9 +384,9 @@ li {
 @media only screen and (min-width: 650px) {
   /* TODO currently these are all the mobile defaults, move mobile defs to std are and std down here */
 
-  
 
-  
+
+
 
   .headerTop {
     flex-direction: row;
@@ -441,6 +441,14 @@ li {
     border: none;
   }
 
+  .contactBox {
+    width: 15%;
+  }
+
+  .contactList {
+    width: 85%;
+  }
+
   /* about */
   .aboutMeHolder {
     width: 80%;
@@ -460,19 +468,9 @@ li {
     box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.9);
   }
 
+  .screenshot {
+    height: 50%;
+  }
 
 
-  /*
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
- */
 }
