@@ -30,7 +30,7 @@ body {
     url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg") no-repeat center center fixed; */
   background: linear-gradient(#09bdd4, #015d7b, #002531) no-repeat center center fixed;
   color: white;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   transition: all 5s;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -47,7 +47,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: white;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   transition: all 5s;
 }
 
@@ -100,7 +100,7 @@ body {
   border: 1px solid #00000000;
   background: none;
   color: white;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 18px;
   height: 100%;
   width: 100%;
