@@ -381,6 +381,11 @@ li {
   text-decoration: underline;
 }
 
+.sbScreenshot {
+  height: 100%;
+  width: 100%;
+}
+
 @media only screen and (min-width: 650px) {
   /* TODO currently these are all the mobile defaults, move mobile defs to std are and std down here */
 

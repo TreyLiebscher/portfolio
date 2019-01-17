@@ -252,7 +252,7 @@ Story {
 
 <div class="infoPicContainer">
   <div class="infoPicHolder">
-    <img src="https://i.imgur.com/V5RZcdt.png" />
+    <img class="sbScreenshot" src="https://i.imgur.com/V5RZcdt.png" />
   </div>
 </div>
 
