@@ -28,7 +28,7 @@ body {
 .site-body[background-state=sea] {
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg") no-repeat center center fixed; */
-  background: linear-gradient(#09bdd4, #015d7b, #002531) no-repeat center center fixed;
+  background: linear-gradient(#46ef85, #021f61, #001921) no-repeat center center fixed;
   color: white;
   font-family: 'Titillium Web', sans-serif;
   transition: all 5s;
