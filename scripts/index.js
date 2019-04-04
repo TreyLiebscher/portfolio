@@ -23,7 +23,7 @@ function handleContactClick() {
 function handleProjectsClick() {
   $('#projectButton').on('click', (ev) => {
     ev.preventDefault();
-    $('#main-content').html(renderedProjects);
+    $('#main-content').html(projectContainer);
     $('#siteBody').attr('background-state') === 'coral' ? changeBackground('#siteBody', 'coral', 'sea') : null;
     fade('.projectBox', 100);
   });
@@ -58,7 +58,7 @@ function handleBackClick() {
   $('#main-content').on('click', 'button#back', (ev) => {
     ev.preventDefault();
     changeBackground('#siteBody', 'coral', 'sea');
-    $('#main-content').html(renderedProjects);
+    $('#main-content').html(projectContainer);
     fade('.projectBox', 100);
   });
 }
