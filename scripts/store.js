@@ -439,7 +439,7 @@ function renderProjectBox(pro) {
             <div class="techIcons">
               ${pro.icons.join("")}
             </div>
-            <button id="${pro.info}" class="infoButton">MORE INFO</button>
+            <button id="${pro.info}" class="infoButton">More Info</button>
           </div>
   `
 }
