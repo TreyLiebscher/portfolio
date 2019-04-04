@@ -436,9 +436,6 @@ function renderProjectBox(pro) {
             <p class="projectText">
               ${pro.description}
             </p>
-            <div class="techIcons">
-              ${pro.icons.join("")}
-            </div>
             <button id="${pro.info}" class="infoButton">More Info</button>
           </div>
   `
@@ -453,3 +450,7 @@ const projectContainer = `
     ${renderedProjects.join('')}
   </div>
 `;
+
+/* <div class="techIcons">
+${pro.icons.join("")}
+</div> */
