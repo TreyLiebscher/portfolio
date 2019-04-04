@@ -81,8 +81,7 @@ If a user wishes, they may set their stories to 'public' status and the story wi
         and valleys of a specific road by clicking on the box containing that part of the directions. This app could be used to to anticipate what type of inclines/declines the user may have to deal with when planning a trip. 
         <br>
         <br>
-        It is also interesting to
-        be able to see what is basically a 'profile' of roads the user may use on a daily basis.`
+`
   }
 ];
 
@@ -419,10 +418,12 @@ ThrillerMovie {
 function renderProjectBox(pro) {
   return `
           <div class="projectBox faded">
-            <h2 class="projectTitle">${pro.title}</h2>
-            <div class="linkBox">
-              <a href="${pro.repo}#${pro.info}repo" target="_blank" name="${pro.info}repo"class="projectLink">Code</a>
-              <a href="${pro.demo}#${pro.info}" target="_blank" name="${pro.info}" class="projectLink">Live Demo</a>
+            <div class="projectNav">
+              <h2 class="projectTitle">${pro.title}</h2>
+              <div class="linkBox">
+                <a href="${pro.repo}#${pro.info}repo" target="_blank" name="${pro.info}repo"class="projectLink">Code</a>
+                <a href="${pro.demo}#${pro.info}" target="_blank" name="${pro.info}" class="projectLink">Live Demo</a>
+              </div>
             </div>
             <img src="${pro.screenshot}" class="screenshot" />
             <p class="projectText">
@@ -439,3 +440,9 @@ function renderProjectBox(pro) {
 const renderedProjects = projects.map((project) => {
   return renderProjectBox(project);
 });
+
+const projectContainer = `
+  <div class="projectContainer">
+    ${renderedProjects.join('')}
+  </div>
+`;
