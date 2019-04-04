@@ -26,9 +26,9 @@ body {
 
 
 .site-body[background-state=sea] {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg") no-repeat center center fixed; */
-  background: linear-gradient(#46ef85, #021f61, #001921) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://wallpaper.wiki/wp-content/uploads/2017/06/Download-free-Ocean-Wallpapers-HD.jpg") no-repeat center center fixed;
+  /* background: linear-gradient(#46ef85, #021f61, #001921) no-repeat center center fixed; */
   color: white;
   font-family: 'Titillium Web', sans-serif;
   transition: all 5s;
@@ -170,49 +170,70 @@ body {
   transition: text-shadow 2s ease;
 }
 
+.projectContainer {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .projectBox {
   display: flex;
   background-color: #0000005c;
   flex-direction: column;
   width: 90%;
-  margin: auto;
-  margin-bottom: 20px;
-  padding: 10px;
+  /* margin: auto;
+  margin-bottom: 20px; */
+  margin: 0.5em;
+  /* padding: 10px; */
   transition: all 1s ease;
+  border: 1px solid white;
 }
 
 .faded {
   opacity: 0;
 }
 
-.projectTitle {
-  text-align: center;
+.projectNav {
+  display: flex;
   border-bottom: 1px solid white;
-  width: 30%;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom:10px;
+}
+
+.projectTitle {
+  /* border-bottom: 1px solid white; */
+  font-size: 20px;
+  /* width: 30%; */
+  display: flex;
+  align-items: center;
+  /* align-content: center; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
 
 .screenshot {
   width: 80%;
-  height: 50%;
-  margin: auto;
-  margin-bottom: 10px;
+  /* height: 50%; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .linkBox {
   display: flex;
-  width: 50%;
+  flex-direction: column;
+  margin-left: auto;
+  /* width: 50%;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
 }
 
 .projectLink {
-  margin: 0.5em;
+  /* margin: 0.5em; */
   color: white;
-  border: 2px solid white;
-  border-radius: 5px;
+  border-left: 1px solid white;
+  border-bottom: none;
+  padding: 5px;
+  /* border-radius: 5px; */
   text-decoration: none;
   text-align: center;
   font-size: 16px;
@@ -221,6 +242,11 @@ body {
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.3s ease;
+}
+
+.projectLink:last-child {
+  /* border-bottom: 1px solid white; */
+  border-top: 1px solid white;
 }
 
 .projectLink:hover,
@@ -234,14 +260,14 @@ body {
   margin: auto;
   margin-bottom: 10px;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 11px;
 }
 
 .techIcons {
   margin: auto;
   display: flex;
   margin-bottom: 10px;
-  height: 100px;
+  height: 40px;
   width: 80%;
   flex-wrap: wrap;
   background-color: #80808057;
@@ -252,7 +278,6 @@ body {
   margin: 0.5em;
 }
 
-.infoButton,
 .backButton {
   display: block;
   width: 30%;
@@ -261,6 +286,19 @@ body {
   margin-bottom: 10px;
   border: 2px solid white;
   border-radius: 5px;
+  background: none;
+  color: white;
+  background: linear-gradient(to right, #00000075 50%, #00000000 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease;
+}
+
+.infoButton {
+  display: block;
+  height: 30px;
+  border: none;
+  border-top: 1px solid white;
   background: none;
   color: white;
   background: linear-gradient(to right, #00000075 50%, #00000000 50%);
@@ -470,11 +508,11 @@ li {
   .projectBox,
   .aboutMeHolder,
   .infoContainer {
-    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.9);
+    /* box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.9); */
   }
 
   .screenshot {
-    height: 50%;
+    /* height: 50%; */
   }
 
 
