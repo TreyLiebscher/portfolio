@@ -83,6 +83,7 @@ body {
 
 .nameBox {
   font-size: 40px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .nameTagline {
@@ -100,7 +101,7 @@ body {
   border: 1px solid #00000000;
   background: none;
   color: white;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   height: 100%;
   width: 100%;
@@ -141,6 +142,7 @@ body {
   width: 25%;
   text-align: center;
   transition: all 2s;
+  font-family: 'Raleway', sans-serif;
 }
 
 .glow {
@@ -168,6 +170,7 @@ body {
   padding: 1px 6px;
   font-size: 18px;
   transition: text-shadow 2s ease;
+  font-family: 'Raleway', sans-serif;
 }
 
 .projectContainer {
@@ -323,8 +326,28 @@ body {
   width: 90%;
   background-color: #0000005c;
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
   transition: all 1s ease;
+}
+
+.nameTitle {
+  text-align: center;
+}
+
+.imageBox {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  height: 125px;
+  width: 80%;
+}
+
+.selfie {
+  display: block;
+  margin: auto;
+  height: 100%;
 }
 
 .aboutMeHolder p,
