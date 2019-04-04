@@ -87,12 +87,18 @@ If a user wishes, they may set their stories to 'public' status and the story wi
 
 const aboutMe = `
 <div class="aboutMeHolder faded">
-<h2>Hi, I'm Trey!</h2>
+<h2 class="nameTitle">Hi, I'm Trey!</h2>
+<div class="imageBox">
+<img src="https://i.imgur.com/QJANcWb.jpg?1" class="selfie"/>
+<img src="https://i.imgur.com/gybMcFW.jpg?1" class="selfie"/>
+<img src="https://i.imgur.com/MPwaDLf.jpg?1" class="selfie"/>
+</div>
+
 <p>I'm a web developer currently based in the Raleigh-Durham area of North Carolina.</p>
 <p>I have many interests, but here are the three big ones:</p>
 <ul>
   <li>Action Movies (all time periods, foreign and domestic, I seriously think I’ve seen them all)</li>
-  <li>The outdoors (oceans first, mountains second, tundra third)</li>
+  <li>The outdoors (oceans first, mountains second, desert third)</li>
   <li>Learning new stuff</li>
 </ul>
 <p>My passion for web development stems from that third item on the list: <b>learning new stuff</b>. I love
@@ -141,7 +147,8 @@ const aboutMe = `
 
 <p>Currently I am looking for work. Please get in touch with me using the links at the bottom of this page.</p>
 
-</div>`
+</div>
+`
 
 const elevationVisualizerInfo = `
 <div class="infoContainer faded" id="elevationVisualizer">
