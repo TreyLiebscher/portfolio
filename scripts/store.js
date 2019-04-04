@@ -81,19 +81,24 @@ If a user wishes, they may set their stories to 'public' status and the story wi
         and valleys of a specific road by clicking on the box containing that part of the directions. This app could be used to to anticipate what type of inclines/declines the user may have to deal with when planning a trip. 
         <br>
         <br>
-        It is also interesting to
-        be able to see what is basically a 'profile' of roads the user may use on a daily basis.`
+`
   }
 ];
 
 const aboutMe = `
 <div class="aboutMeHolder faded">
-<h2>Hi, I'm Trey!</h2>
+<h2 class="nameTitle">Hi, I'm Trey!</h2>
+<div class="imageBox">
+<img src="https://i.imgur.com/QJANcWb.jpg?1" class="selfie"/>
+<img src="https://i.imgur.com/gybMcFW.jpg?1" class="selfie"/>
+<img src="https://i.imgur.com/MPwaDLf.jpg?1" class="selfie"/>
+</div>
+
 <p>I'm a web developer currently based in the Raleigh-Durham area of North Carolina.</p>
 <p>I have many interests, but here are the three big ones:</p>
 <ul>
   <li>Action Movies (all time periods, foreign and domestic, I seriously think I’ve seen them all)</li>
-  <li>The outdoors (oceans first, mountains second, tundra third)</li>
+  <li>The outdoors (oceans first, mountains second, desert third)</li>
   <li>Learning new stuff</li>
 </ul>
 <p>My passion for web development stems from that third item on the list: <b>learning new stuff</b>. I love
@@ -142,7 +147,8 @@ const aboutMe = `
 
 <p>Currently I am looking for work. Please get in touch with me using the links at the bottom of this page.</p>
 
-</div>`
+</div>
+`
 
 const elevationVisualizerInfo = `
 <div class="infoContainer faded" id="elevationVisualizer">
@@ -419,10 +425,12 @@ ThrillerMovie {
 function renderProjectBox(pro) {
   return `
           <div class="projectBox faded">
-            <h2 class="projectTitle">${pro.title}</h2>
-            <div class="linkBox">
-              <a href="${pro.repo}#${pro.info}repo" target="_blank" name="${pro.info}repo"class="projectLink">Code</a>
-              <a href="${pro.demo}#${pro.info}" target="_blank" name="${pro.info}" class="projectLink">Live Demo</a>
+            <div class="projectNav">
+              <h2 class="projectTitle">${pro.title}</h2>
+              <div class="linkBox">
+                <a href="${pro.repo}#${pro.info}repo" target="_blank" name="${pro.info}repo"class="projectLink">Code</a>
+                <a href="${pro.demo}#${pro.info}" target="_blank" name="${pro.info}" class="projectLink">Live Demo</a>
+              </div>
             </div>
             <img src="${pro.screenshot}" class="screenshot" />
             <p class="projectText">
@@ -431,7 +439,7 @@ function renderProjectBox(pro) {
             <div class="techIcons">
               ${pro.icons.join("")}
             </div>
-            <button id="${pro.info}" class="infoButton">MORE INFO</button>
+            <button id="${pro.info}" class="infoButton">More Info</button>
           </div>
   `
 }
@@ -439,3 +447,9 @@ function renderProjectBox(pro) {
 const renderedProjects = projects.map((project) => {
   return renderProjectBox(project);
 });
+
+const projectContainer = `
+  <div class="projectContainer">
+    ${renderedProjects.join('')}
+  </div>
+`;
