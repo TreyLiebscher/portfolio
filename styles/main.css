@@ -175,6 +175,9 @@ body {
 
 .projectContainer {
   display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -186,10 +189,11 @@ body {
   width: 90%;
   /* margin: auto;
   margin-bottom: 20px; */
-  margin: 0.5em;
+  margin: auto;
+  margin-bottom: 20px;
   /* padding: 10px; */
   transition: all 1s ease;
-  border: 1px solid white;
+  border: none;
 }
 
 .faded {
@@ -300,14 +304,16 @@ body {
 .infoButton {
   display: block;
   height: 30px;
-  border: none;
-  border-top: 1px solid white;
+  border: 1px solid white;
+  border-left: none;
+  border-right: none;
   background: none;
   color: white;
   background: linear-gradient(to right, #00000075 50%, #00000000 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
 }
 
 .infoButton:hover,
@@ -474,6 +480,10 @@ li {
     border-left: 1px solid white;
   }
 
+  .projectContainer {
+    flex-direction: row;
+  }
+
   #projectButton {
     border: 1px solid #00000000;
   }
@@ -526,6 +536,7 @@ li {
 
   .projectBox {
     width: 80%;
+    margin: 0.5em;
   }
 
   .projectBox,
