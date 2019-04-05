@@ -292,8 +292,8 @@ body {
   height: 30px;
   margin: auto;
   margin-bottom: 10px;
-  border: 2px solid white;
-  border-radius: 5px;
+  border: 1px solid white;
+  font-family: 'Raleway', sans-serif;
   background: none;
   color: white;
   background: linear-gradient(to right, #00000075 50%, #00000000 50%);
@@ -338,6 +338,11 @@ body {
   margin-bottom: 20px;
   padding: 10px;
   transition: all 1s ease;
+}
+
+.aboutMeText {
+  width: 90%;
+  margin: auto;
 }
 
 .nameTitle {
@@ -532,6 +537,11 @@ li {
     width: 80%;
   }
 
+  .aboutMeText {
+    width: 70%;
+    margin: auto;
+  }
+
   .techContainer {
     flex-direction: row;
   }
@@ -539,16 +549,6 @@ li {
   .projectBox {
     width: 80%;
     margin: 0.5em;
-  }
-
-  .projectBox,
-  .aboutMeHolder,
-  .infoContainer {
-    /* box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.9); */
-  }
-
-  .screenshot {
-    /* height: 50%; */
   }
 
 

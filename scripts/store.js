@@ -93,7 +93,7 @@ const aboutMe = `
 <img src="https://i.imgur.com/gybMcFW.jpg?1" class="selfie"/>
 <img src="https://i.imgur.com/MPwaDLf.jpg?1" class="selfie"/>
 </div>
-
+<div class="aboutMeText">
 <p>I'm a web developer currently based in the Raleigh-Durham area of North Carolina.</p>
 <p>I have many interests, but here are the three big ones:</p>
 <ul>
@@ -111,7 +111,7 @@ const aboutMe = `
   cannot think of a place where I would be
   happier than somewhere where I had to grow in order to be successful.</p>
 <p>Here are the languages and tools I am versed in:</p>
-
+</div>
 <div class="techContainer">
   <div class="techHolder">
     <p class="techTitle">Front-End</p>
