@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trey Liebscher - Web Developer</title>
+
+  <!--  Styles  -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/special.css">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+</head>
+
+<body id="siteBody" class="site-body" background-state="sea">
+  <div class="container">
+    <header class="headerTop">
+
+      <div class="navTitle">
+        <h1 class="nameBox">Trey Liebscher</h1>
+        <p class="nameTagline">Software Engineer</p>
+      </div>
+
+      <div class="navList">
+        <!-- <div class="buttonHolder"><button class="navButton" id="aboutButton">About Me</button></div>
+        <div class="buttonHolder"><button class="navButton" id="projectButton">Projects</button></div>
+        <div class="buttonHolder"><button class="navButton" id="contactButton">Contact</button></div> -->
+        <div class="buttonHolder"><button class="navButton">L I G H T  S H O W</button></div>
+      </div>
+
+    </header>
+
+    <!-- main content -->
+
+    <section class="special-content" id="specialContent">
+
+        <!-- <iframe
+          id="inlineFrameExample"
+          title="Inline Frame Example"
+          width="100%"
+          height="200"
+          src="https://numberfy.treyliebscher.repl.co"
+        >
+        </iframe> -->
+      
+        <button id="viewControls" class="hidden">View Controls</button>
+
+        <div id="userControls" class="user-controls-container hidden">
+            <div class="user-controls-inner">
+                <button id="hideControls">X</button>
+                <h1>Light Show Controls</h1>
+                <div class="more-info" id="speedInfo">
+                   ?
+                </div>
+                <input type="range" id="stepSpeed" name="Speed"
+                min="1" max="10">
+                <label for="stepSpeed">Speed</label>
+
+                <div class="more-info" id="durationInfo">
+                  ?
+                </div>
+                <label for="durationInput">Duration (seconds)</label>
+                <input id="durationInput" value="10" type="number" />
+
+                <div class="more-info" id="designInfo">
+                  ?
+                </div>
+                
+                <div id="squareButtonContainer" class="square-button-container">
+                  <button class="square-button" id="_a1">&#11044;</button>
+                  <button class="square-button" id="_a2">&#11044;</button>
+                  <button class="square-button" id="_a3">&#11044;</button>
+                  <button class="square-button" id="_a4">&#11044;</button>
+                  <button class="square-button" id="_a5">&#11044;</button>
+                  <button class="square-button" id="_b1">&#11044;</button>
+                  <button class="square-button" id="_b2">&#11044;</button>
+                  <button class="square-button" id="_b3">&#11044;</button>
+                  <button class="square-button" id="_b4">&#11044;</button>
+                  <button class="square-button" id="_b5">&#11044;</button>
+                  <button class="square-button" id="_c1">&#11044;</button>
+                  <button class="square-button" id="_c2">&#11044;</button>
+                  <button class="square-button" id="_c3">&#11044;</button>
+                  <button class="square-button" id="_c4">&#11044;</button>
+                  <button class="square-button" id="_c5">&#11044;</button>
+                  <button class="square-button" id="_d1">&#11044;</button>
+                  <button class="square-button" id="_d2">&#11044;</button>
+                  <button class="square-button" id="_d3">&#11044;</button>
+                  <button class="square-button" id="_d4">&#11044;</button>
+                  <button class="square-button" id="_d5">&#11044;</button>
+                  <button class="square-button" id="_e1">&#11044;</button>
+                  <button class="square-button" id="_e2">&#11044;</button>
+                  <button class="square-button" id="_e3">&#11044;</button>
+                  <button class="square-button" id="_e4">&#11044;</button>
+                  <button class="square-button" id="_e5">&#11044;</button>
+                </div>
+                <button id="runLightShow">RUN</button>
+            </div>
+        </div>
+
+        <div id="editSquaresContainer">
+
+        </div>
+      <div class="special-container">
+        <div>
+            <div id="lightGrid" class="lightgrid-container">
+                <!-- <div class="square" id="a1"></div>
+                <div class="square" id="a2"></div>
+                <div class="square" id="a3"></div>
+                <div class="square" id="b1"></div>
+                <div class="square" id="b2"></div>
+                <div class="square" id="b3"></div>
+                <div class="square" id="c1"></div>
+                <div class="square" id="c2"></div>
+                <div class="square" id="c3"></div> -->
+                <div class="square" id="a1"></div>
+                <div class="square" id="a2"></div>
+                <div class="square" id="a3"></div>
+                <div class="square" id="a4"></div>
+                <div class="square" id="a5"></div>
+                <div class="square" id="b1"></div>
+                <div class="square" id="b2"></div>
+                <div class="square" id="b3"></div>
+                <div class="square" id="b4"></div>
+                <div class="square" id="b5"></div>
+                <div class="square" id="c1"></div>
+                <div class="square" id="c2"></div>
+                <div class="square" id="c3"></div>
+                <div class="square" id="c4"></div>
+                <div class="square" id="c5"></div>
+                <div class="square" id="d1"></div>
+                <div class="square" id="d2"></div>
+                <div class="square" id="d3"></div>
+                <div class="square" id="d4"></div>
+                <div class="square" id="d5"></div>
+                <div class="square" id="e1"></div>
+                <div class="square" id="e2"></div>
+                <div class="square" id="e3"></div>
+                <div class="square" id="e4"></div>
+                <div class="square" id="e5"></div>
+              </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- main content -->
+
+    <!-- <footer class="footerBottom">
+      <h2 class="contactBox">Contact</h2>
+      <div class="contactList">
+        <div class="contactHolder">
+          <a href="https://github.com/TreyLiebscher" target="_blank" class="contact">GitHub</a>
+        </div>
+        <div class="contactHolder">
+          <a href="https://www.linkedin.com/in/trey-liebscher-70a692161" target="_blank" class="contact">LinkedIn</a>
+        </div>
+        <div class="contactHolder">
+          <a href="mailto:wcliebsc@gmail.com" target="_top" class="contact">Email</a>
+        </div>
+      </div>
+    </footer> -->
+
+  </div>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="scripts/special.js"></script>
+
+</body>
+
+</html>
