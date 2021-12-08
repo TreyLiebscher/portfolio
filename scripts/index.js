@@ -1,5 +1,20 @@
 'use strict';
 
+const projectArray = [
+  {
+    name: 'elevationVisualizer',
+    info: elevationVisualizerInfo
+  },
+  {
+    name: 'storyBank',
+    info: storyBankInfo
+  },
+  {
+    name: 'movieHelix',
+    info: movieHelixInfo
+  }
+];
+
 function handleAboutClick() {
   $('#aboutButton').on('click', (ev) => {
     ev.preventDefault();
@@ -29,28 +44,25 @@ function handleProjectsClick() {
   });
 }
 
-function moreInfo(project) {
+function moreInfo(requestedProject) {
+  projectArray.map(project => {
+    if(project.name === requestedProject) {
+      $('#main-content').html(project.info)
+    }
+  });
   changeBackground('#siteBody', 'sea', 'coral');
   glow('.infoTitle', 400, 1600);
-  $('#main-content').html(project);
   fade('.infoContainer', 100);
 }
 
-function handleFirstProject() {
-  $('#main-content').on('click', 'button#elevationVisualizer', (ev) => {
-    moreInfo(elevationVisualizerInfo)
-  });
-}
-
-function handleSecondProject() {
-  $('#main-content').on('click', 'button#storyBank', (ev) => {
-    moreInfo(storyBankInfo);
-  });
-}
-
-function handleThirdProject() {
-  $('#main-content').on('click', 'button#movieHelix', (ev) => {
-    moreInfo(movieHelixInfo);
+function handleProjectClick() {
+  $('#main-content').on('click', 'button', (ev) => {
+    const requestedProject = ev.currentTarget.id;
+    projectArray.map(project => {
+      if (project.name === requestedProject) {
+        moreInfo(project.name);
+      }
+    });
   });
 }
 
@@ -94,14 +106,33 @@ function glow(element, start, end) {
   });
 }
 
+function handleGreet() {
+  console.log('OO  00  ||||||   ||   ||                                      ')
+  console.log('OO  00  ||       ||   ||                                  ')
+  console.log('OO  00  ||       ||   ||                                  ')
+  console.log('OO0000  ||||||   \\  //                                        ')
+  console.log('OO  00  ||         ||                                    ')
+  console.log('OO  00  ||         ||                                    ')
+  console.log('OO  00  ||||||     ||                                        ')          
+}
+
+function handleNavigateToLS() {
+  $('#navigateToLS').on('click', (ev) => {
+    console.log('KIWI', window.location.href);
+    window.location.href = window.location.href + 'test' 
+  });
+}
+
+
+
 function portfolio() {
   $(handleContactClick);
   $(handleAboutClick);
   $(handleProjectsClick);
-  $(handleFirstProject);
-  $(handleSecondProject);
-  $(handleThirdProject);
   $(handleBackClick);
+  $(handleProjectClick);
+  $(handleGreet);
+  $(handleNavigateToLS);
 }
 
 $(portfolio);

@@ -159,7 +159,7 @@ const elevationVisualizerInfo = `
 
 <div class="infoPicContainer">
   <div class="infoPicHolder">
-    <img class="infoPic" src="http://www.retrogameage.com/wp-content/uploads/2017/08/Bandai_Golf_Gameplay1-1.jpg"/>
+    <img class="infoPic" src="https://i.ytimg.com/vi/m2usf2t5yx4/hqdefault.jpg"/>
   </div>
   <p class="infoPicCaption">Notice the way that the terrain of the course is displayed above the top-down view. This was what I wanted.</p>
 </div>

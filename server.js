@@ -12,4 +12,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + 'views/index.html'));
 });
 
+app.get('/test', function (req, res) {
+  res.sendFile(path.join(__dirname + '/test.html'));
+});
+
 app.listen(process.env.PORT || 8080);

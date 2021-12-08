@@ -460,6 +460,38 @@ li {
   width: 100%;
 }
 
+.small-project-outer-container {
+  display: flex;
+  width: 800px;
+  background: black;
+}
+
+.small-project-inner-container {
+  height: 200px;
+  width: 200px;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 1em;
+}
+
+.small-project-button {
+  border-top: 1px solid white;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  color: white;
+  width: 100%;
+  margin-top: 100px;
+  height: 20px;
+}
+
+.small-project-button:hover {
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 650px) {
   /* TODO currently these are all the mobile defaults, move mobile defs to std are and std down here */
 
