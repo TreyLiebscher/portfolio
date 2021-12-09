@@ -118,7 +118,7 @@ function handleGreet() {
 
 function handleNavigateToLS() {
   $('#navigateToLS').on('click', (ev) => {
-    window.location.href = window.location.href + 'test'; 
+    window.location.href = window.location.href + 'lightShow'; 
   });
 }
 

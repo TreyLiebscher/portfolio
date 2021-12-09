@@ -12,8 +12,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + 'views/index.html'));
 });
 
-app.get('/test', function (req, res) {
-  res.sendFile(path.join(__dirname + '/test.html'));
+app.get('/lightShow', function (req, res) {
+  res.sendFile(path.join(__dirname + '/lightShow.html'));
 });
 
 app.get('/wordTool', function (req, res) {
