@@ -112,13 +112,11 @@ function handleSquareButtonClick() {
             $(`#${ev.currentTarget.id}`).addClass('selected');
             const id = ev.currentTarget.id.split('_')[1];
             userLightArray.push(id);
-            console.log('KIWI added ', userLightArray)
         } else {
             $(`#${ev.currentTarget.id}`).removeClass('selected');
             const id = ev.currentTarget.id.split('_')[1];
             const index = userLightArray.indexOf(id);
             userLightArray.splice(index, 1);
-            console.log('KIWI removed ', userLightArray)
         }
     });    
 }
@@ -262,6 +260,12 @@ function handleViewMoreInfo() {
     });
 }
 
+function handleNavigateToHome() {
+    $('#nameButton').on('click', (ev) => {
+      window.location.pathname = '';
+    });
+}
+
 
 function runSpecial() {
     $(lightShow(5000, defaultLightArray, false, 10, blueLightArray));
@@ -273,6 +277,7 @@ function runSpecial() {
     $(handleHideControls);
     $(handleViewMoreInfo);
     $(handleSliderInputChange);
+    $(handleNavigateToHome);
 }
 
 $(runSpecial);

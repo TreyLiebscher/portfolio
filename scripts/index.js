@@ -118,12 +118,21 @@ function handleGreet() {
 
 function handleNavigateToLS() {
   $('#navigateToLS').on('click', (ev) => {
-    console.log('KIWI', window.location.href);
-    window.location.href = window.location.href + 'test' 
+    window.location.href = window.location.href + 'test'; 
   });
 }
 
+function handleNavigateToHome() {
+  $('#nameButton').on('click', (ev) => {
+    window.location.pathname = '';
+  });
+}
 
+function navigateToWord() {
+  $('#navigateToWord').on('click', (ev) => {
+    window.location.pathname =  'wordTool'; 
+  });
+}
 
 function portfolio() {
   $(handleContactClick);
@@ -133,6 +142,8 @@ function portfolio() {
   $(handleProjectClick);
   $(handleGreet);
   $(handleNavigateToLS);
+  $(handleNavigateToHome);
+  $(navigateToWord);
 }
 
 $(portfolio);

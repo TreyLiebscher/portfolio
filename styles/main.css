@@ -462,7 +462,7 @@ li {
 
 .small-project-outer-container {
   display: flex;
-  width: 800px;
+  width: 100%;
   background: black;
 }
 
@@ -492,12 +492,18 @@ li {
   cursor: pointer;
 }
 
+.name-button {
+  background: none;
+  color: white;
+  border: none;
+}
+
+.name-button:hover {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 650px) {
   /* TODO currently these are all the mobile defaults, move mobile defs to std are and std down here */
-
-
-
-
 
   .headerTop {
     flex-direction: row;
@@ -583,5 +589,8 @@ li {
     margin: 0.5em;
   }
 
-
+  .small-project-outer-container {
+    width: 100%;
+    background: black;
+  }
 }

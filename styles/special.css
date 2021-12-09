@@ -1,3 +1,9 @@
+#viewControls {
+    width: 5%;
+    border: 1px solid white;
+    background: gray;
+}
+
 .user-controls-container {
     width: 90%;
     left: 50%;

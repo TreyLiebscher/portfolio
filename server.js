@@ -16,4 +16,8 @@ app.get('/test', function (req, res) {
   res.sendFile(path.join(__dirname + '/test.html'));
 });
 
+app.get('/wordTool', function (req, res) {
+  res.sendFile(path.join(__dirname + '/wordTool.html'));
+});
+
 app.listen(process.env.PORT || 8080);
